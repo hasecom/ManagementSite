@@ -6,10 +6,10 @@ export const Basic = [
         Param:"",
         SiteTitle:"",
         FooterMenu:{
-            "ホーム":"",
-            "お知らせ":"",
-            "活動":"",
-            "個人の紹介":"",
+            "ホーム":"/",
+            "お知らせ":"/news",
+            "活動":"/activity",
+            "個人の紹介":"/profile",
         }
     }
 ]
@@ -19,14 +19,15 @@ export const Basic = [
 ///</summary>
 export const Home = [
     {
-        Param:"",
+        Param:"ホーム",
+        Path:Basic[0].FooterMenu["ホーム"]
     }
 ]
 
 ///<summary>
 ///お知らせ
 ///</summary>
-export const Home = [
+export const News = [
     {
         Param:"",
     }
@@ -35,7 +36,7 @@ export const Home = [
 ///<summary>
 ///活動
 ///</summary>
-export const Home = [
+export const Activity = [
     {
         Param:"",
     }
@@ -44,7 +45,7 @@ export const Home = [
 ///<summary>
 ///個人の紹介
 ///</summary>
-export const Home = [
+export const Profile = [
     {
         Param:"",
     }

@@ -2,24 +2,36 @@
   <div id="app">
    <Header />
     <div class="mt-4">
-        <router-link to="/">ホーム</router-link>
-        <router-link to="/activity">活動</router-link>
-        <router-link to="/news">ニュース</router-link>
-        <router-link to="/profile">Profile</router-link>
-        <div id="body"><router-view></router-view></div>
-        <div>a</div>
-    </div>
-   <Footer />
+        <div id="body">
+          <router-view></router-view>
+        </div>
+    </div>{{home}}
+   <Footer :Basic="basic"/>
   </div>
 </template>
 
 <script>
-
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import  { 
+  Basic, 
+  Home, 
+  News, 
+  Activity,
+  Profile
+  }  from  './js/data'
 
 export default {
   name: 'app',
+  data(){
+    return{
+      basic:Basic[0],
+      home:Home,
+      news:News,
+      activity:Activity,
+      profile:Profile
+    }
+  },
   components: {
     Header,
     Footer
