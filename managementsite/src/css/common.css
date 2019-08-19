@@ -1,6 +1,26 @@
+:root {
+    --main-bg-color: #f5f6fa;
+    --main-component-color:rgba(52, 152, 219,1);
+  }
+body{
+    background:var(--main-bg-color);
+}
+#app {
+    padding:0px 10px 0px 10px;
+    word-wrap: break-word;
+}
 #header,#footer{
     z-index: 30;
 }
 #content{
     z-index:20;
+}
+.notMargin{
+    margin:0;
+}
+.bg-main-color{
+    background:var(--main-component-color);
+}
+.pointer{
+    cursor: pointer;
 }
