@@ -1,7 +1,7 @@
 <template>
-<div id="app">
+<div id="app" :style="body">
       <Header :Basic="basic" ref="header" />
-    <div class="mt-4" :style="body">
+    <div>
         <div id="body">
             <router-view :PageData="this.select[this.display][0]"></router-view>
         </div>
@@ -51,7 +51,6 @@ export default {
     },
     mounted:function(){
       this.TopPadding = this.$refs.header.$vnode.elm.clientHeight;
-      console.log(this.TopPadding)
     },
     methods: {
         LoadDisplayPath() {

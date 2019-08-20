@@ -30,7 +30,7 @@ export const Home = [
         Param:"ホーム",
         Path:Basic[0].FooterMenu["ホーム"],
         Image:{
-            "home":'./assets/home.jpg'
+            "home":'assets/home.jpg'
         }
     }
 ]
