@@ -1,7 +1,7 @@
 <template>
-<div>
-    <img class="full_img" :src="require('../'+PageData.Image.home)">
-
+<div class="sample">
+    
+kkkkkkkkkkkkkkkk
     <br>
 </div> 
 </template>
@@ -15,8 +15,7 @@ export default {
     },
     data() {
         return {
-            bb:"/home",
-            cc:"assets/home.jpg"
+
         }
     },
     mounted: function () {

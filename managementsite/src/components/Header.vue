@@ -1,7 +1,7 @@
 <template>
-    <div id="header" class="fixed-top text-center h2 pt-2 pb-2 bg-main-color text-white">
-        {{Basic.SiteTitle}}
-
+    <div id="header" stlye="position:relative; height:500px;" class="text-center text-white">
+        <div  class="full_img"><img ref="TopImg" id="top_img" :src="require('../'+PageData.Image.Top)" ></div>
+        <div class="site_title">{{Basic.SiteTitle}}</div>
     </div>
 </template>
 <script>
@@ -9,11 +9,33 @@ export default {
     props:{
        Basic:{
            type:Object
-       }
+       },
+       PageData: {
+            type: Object,
+        }
+    },
+    data() {
+        return {
+            TopImgHeight:0,
+            LoadTopImg:false,
+            isMounted:false
+        }
+    },
+    watch:{
+    },
+    mounted:function(){
+        this.isMounted = true;
+    },
+    methods:{
+        
+    },
+    computed:{
+
     }
-    
 }
 </script>
-<style lang="sass" scoped>
-
+<style scoped>
+#top_img{
+        width: inherit;
+}
 </style>

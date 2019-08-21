@@ -23,6 +23,18 @@ export const Site = [
 ]
 
 ///<summary>
+///ヘッダー
+///</summary>
+export const Head = [
+    {
+        Param:"ヘッダー",
+        Image:{
+            "Top":'assets/computer.jpg'
+        }
+    }
+]
+
+///<summary>
 ///ホーム
 ///</summary>
 export const Home = [
@@ -30,7 +42,7 @@ export const Home = [
         Param:"ホーム",
         Path:Basic[0].FooterMenu["ホーム"],
         Image:{
-            "home":'assets/home.jpg'
+            
         }
     }
 ]

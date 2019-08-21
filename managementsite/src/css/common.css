@@ -6,7 +6,6 @@ body{
     background:var(--main-bg-color);
 }
 #app {
-    padding:0px 10px 0px 10px;
     word-wrap: break-word;
 }
 #header,#footer{
@@ -26,10 +25,18 @@ body{
 }
 
 .full_img{
+    position: relative;
+    width:100%;
+
+}
+#body{
+    position: relative;
+    padding:0px 10px 0px 10px;
+}
+.site_title{
     position: absolute;
     top:0;
+    bottom:0;
     right:0;
     left:0;
-    bottom:0;
-    width: 100%;
 }

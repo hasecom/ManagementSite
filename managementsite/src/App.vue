@@ -1,11 +1,9 @@
 <template>
-<div id="app" :style="body">
-      <Header :Basic="basic" ref="header" />
-    <div>
+<div id="app">
+      <Header :Basic="basic" :PageData="this.select['head'][0]" ref="header" />
         <div id="body">
             <router-view :PageData="this.select[this.display][0]"></router-view>
         </div>
-    </div>
     <Footer :Basic="basic" />
 </div>
 </template>
@@ -14,6 +12,7 @@
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 import {
+    Head,
     Basic,
     Home,
     News,
@@ -29,6 +28,7 @@ export default {
             basic: Basic[0],
             display:"",
             select:{
+              "head":Head,
               "home":Home,
               "news":News,
               "activity":Activity,
@@ -61,11 +61,6 @@ export default {
                 }
             });
         }
-    },
-    computed:{
-      body:function(){
-        return "padding-top:" + this.TopPadding + "px"
-      }
     }
 }
 </script>
