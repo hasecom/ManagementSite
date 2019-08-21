@@ -1,7 +1,10 @@
 <template>
-    <div id="header" stlye="position:relative; height:500px;" class="text-center text-white">
-        <div  class="full_img"><img ref="TopImg" id="top_img" :src="require('../'+PageData.Image.Top)" ></div>
-        <div class="site_title">{{Basic.SiteTitle}}</div>
+    <div id="header" stlye="position:relative;" class="text-center text-white">
+        <div  class="full_img">
+            <img ref="TopImg" id="top_img" :src="require('../'+PageData.Image.Top)" >
+            <div class="site_title">{{Basic.SiteTitle}}</div>
+        </div>
+        
     </div>
 </template>
 <script>
