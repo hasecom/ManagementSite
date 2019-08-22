@@ -43,7 +43,24 @@ export const Home = [
         Path:Basic[0].FooterMenu["ホーム"],
         Image:{
             
-        }
+        },
+        Content:[
+            {
+            title:"ライティング",
+            fontawesome:"fa-pencil-alt",
+            description:""
+            },
+            {
+            title:"開発",
+            fontawesome:"fa-laptop",
+            description:"aa"
+            },
+            {
+            title:"構築",
+            fontawesome:"fa-wrench",
+            description:"aa"
+            }
+    ]
     }
 ]
 
