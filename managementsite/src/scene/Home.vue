@@ -14,7 +14,7 @@
     </div>
     <TopNews :SiteDatas="this.SiteData" />
     <OverView :SiteDatas="this.SiteData"  :OverViewData="PageData.OverView[0]" />
-    <Preformance  :PreformanceData="PageData.Preformance[0]"/>
+    <Preformance />
 </div> 
 </template>
 <script>

@@ -85,15 +85,7 @@ export const Home = [
             {
                 title:"個人のニーズに応える",
                 content:Basic[0].SiteTitle+"では、個人様向けのWebサイトの制作やご提案をいたします。また、環境の構築などの代行も承っております。"
-            }
-        
-        ],
-        Preformance:
-        [
-            {
-                image:"assets/performance.jpg",
-                title:"制作実績"
-            }
+            } 
         ]
     }
 ]

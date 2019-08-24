@@ -1,0 +1,23 @@
+{
+    "image":"assets/performance.jpg",
+    "title":"制作実績",
+    "childtitle":"個人開発",
+    "content":
+    [
+        {
+          "title":"Fresh activity",
+          "date":"2019-8-25",
+          "description":"個人で活躍できるエンジニアを目指し、その第一歩として個人から気軽に依頼を引き受けられるように作成したホームページ"
+        },
+        {
+            "title":"Twitter Bot運用ツール",
+            "date":"2019-8-04",
+            "description":"ブログ用Twitter運用を最適化するために作成した自動投稿予約ツール"
+        },
+        {
+            "title":"SE Gateway",
+            "date":"2019-7-28",
+            "description":"未経験からエンジニアになるために就活や転職、プログラミングスクール、技術について記したブログ"
+        }
+    ] 
+}
