@@ -12,12 +12,16 @@
             {{PageData.Button.Work}}
         </button>
     </div>
-    <TopNews :SiteDatas="this.SiteData"/>
-
+    <TopNews :SiteDatas="this.SiteData" />
+    <OverView :SiteDatas="this.SiteData"  :OverViewData="PageData.OverView[0]" />
+    <Preformance  :PreformanceData="PageData.Preformance[0]"/>
 </div> 
 </template>
 <script>
 import TopNews from "@/components/TopNews.vue"; 
+import OverView from "@/components/OverView.vue"; 
+import Preformance from "@/components/Performance.vue"; 
+
 export default {
     props: {
         PageData: {
@@ -32,7 +36,9 @@ export default {
         }
     },
     components:{
-        TopNews
+        TopNews,
+        OverView,
+        Preformance
     },
     mounted: function () {
         

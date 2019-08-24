@@ -2,7 +2,9 @@
     <div id="header" stlye="position:relative;" class="text-center text-white">
         <div  class="full_img">
             <img ref="TopImg" id="top_img" :src="require('../'+PageData.Image.Top)" >
-            <div class="site_title">{{Basic.SiteTitle}}</div>
+            <div class="site_title">
+                <span class="px-3 py-3 shadow-sm">{{Basic.SiteTitle}}</span>
+                </div>
         </div>  
     </div>
 </template>
@@ -39,5 +41,17 @@ export default {
 <style scoped>
 #top_img{
         width: inherit;
+}
+.site_title{
+    position: absolute;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    font-size:9vw;
+    width:100%;
+}
+.site_title span{
+    background:rgba(0,0,0,0.4)
 }
 </style>

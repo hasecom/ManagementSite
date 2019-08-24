@@ -4,6 +4,7 @@
         <div id="body">
             <router-view :PageData="this.select[this.display][0]" :SiteData="this.site"></router-view>
         </div>
+        <div class="padding" style="height:300px;"></div>
     <Footer :Basic="basic" />
 </div>
 </template>

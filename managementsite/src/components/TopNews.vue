@@ -1,14 +1,13 @@
 <template>
-    <div class="top-news mt-3 rounded shadow-sm border">
+    <div class="top-news mt-5 rounded shadow-sm border pb-3">
         <div class="text-center topnews_titles py-3">{{News.Titles}}</div>
         <section class="row notMargin py-1"  @click="transition(val.Id)" v-for="(val,keys) in topnewsFormater(News.Contents)" :key="keys">
                 <span class="topnews_date col-6">{{dataFormater(val.Date)}}</span>
                 <span class="topnews_title col-6 text-left">{{val.Title}}</span>
         </section>
         <div id="topnewsbtnWrap" class="px-2">
-        <button class="btn-primary text-center shadow-sm  btn rounded-pill px-1">もっとみる</button>
+        <button class="btn btn-primary text-center shadow-sm  border rounded-pill px-2">もっとみる</button>
         </div>
-        <div style="height:200px;"></div>
     </div>
 </template>
 <script>
@@ -55,7 +54,7 @@ export default {
 }
 .topnews_date{
     font-size:13px;
-    color:blue;
+    color:#0880db;
 }
 .topnews_title{
     font-size:13px;

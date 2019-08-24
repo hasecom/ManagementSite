@@ -32,14 +32,6 @@ body{
     position: relative;
     
 }
-.site_title{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    font-size:9vw;
-    width:100%;
-}
 
 .description{
     font-size:10px;
