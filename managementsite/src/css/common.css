@@ -30,16 +30,20 @@ body{
 }
 #body{
     position: relative;
-    padding:0px 10px 0px 10px;
+    
 }
 .site_title{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
-    font-size:8vw;
+    font-size:9vw;
+    width:100%;
 }
 
 .description{
-    font-size:2vw;
+    font-size:10px;
+}
+.list_title{
+    font-size:14px;
 }

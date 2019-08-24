@@ -5,12 +5,28 @@ export const Basic = [
     {
         Param:"",
         SiteTitle:"Fresh activity",
-        FooterMenu:{
-            "ホーム":"/",
-            "お知らせ":"/news",
-            "活動":"/activity",
-            "個人の紹介":"/profile",
-        }
+        FooterMenu:[
+            {
+                "title":"ホーム",
+                "fontawesome":"fa-home",
+                "path":"/"
+            },
+            {
+                "title":"お知らせ",
+                "fontawesome":"fa-rss",
+                "path":"/news"
+            },
+            {
+                "title":"活動",
+                "fontawesome":"fa-building",
+                "path":"/activity"
+            },
+            {
+                "title":"個人の紹介",
+                "fontawesome":"fa-user-tie",
+                "path":"/profile"
+            },
+        ]
     }
 ]
 export const Site = [
@@ -48,19 +64,22 @@ export const Home = [
             {
             title:"ライティング",
             fontawesome:"fa-pencil-alt",
-            description:""
+            description:"SEOを意識した良質な記事作成代行"
             },
             {
             title:"開発",
             fontawesome:"fa-laptop",
-            description:"aa"
+            description:"Webをはじめとしたフロント制作・開発やシステム開発の代行"
             },
             {
             title:"構築",
             fontawesome:"fa-wrench",
-            description:"aa"
+            description:"WordPressのインストールやドメイン取得、SSL化等の代行"
             }
-    ]
+        ],
+        Button:{
+            'Work':"Works"
+        }
     }
 ]
 

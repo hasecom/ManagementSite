@@ -2,7 +2,7 @@
 <div id="app">
       <Header :Basic="basic" :PageData="this.select['head'][0]" ref="header" />
         <div id="body">
-            <router-view :PageData="this.select[this.display][0]"></router-view>
+            <router-view :PageData="this.select[this.display][0]" :SiteData="this.site"></router-view>
         </div>
     <Footer :Basic="basic" />
 </div>
@@ -34,7 +34,8 @@ export default {
               "activity":Activity,
               "profile":Profile
               },
-            TopPadding:0
+            TopPadding:0,
+            site:Site[0]
         }
     },
     components: {

@@ -3,8 +3,7 @@
         <div  class="full_img">
             <img ref="TopImg" id="top_img" :src="require('../'+PageData.Image.Top)" >
             <div class="site_title">{{Basic.SiteTitle}}</div>
-        </div>
-        
+        </div>  
     </div>
 </template>
 <script>
