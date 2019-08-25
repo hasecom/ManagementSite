@@ -1,6 +1,6 @@
 <template>
 <div class="pt-5">
-    <div class="full_img">
+    <div class="full_img mb-3">
         <img id="preformance_img" :src="require('../'+ Preformance.image)" alt="">
         <div class="preformance_title pl-3">
             <span class="px-3 py-3 shadow-sm">
@@ -8,21 +8,16 @@
             </span>
         </div>
     </div>
-    <div class="preformanceContent">
-        <!-- <div class="childTitle">
-            {{PreformanceData.childtitle}}
-        </div> -->
-        <div class="list-group">
-            <div v-for="(val, keys) in Preformance.content" :key="keys" class="list-group-item list-group-item-action flex-column align-items-start">
-                <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">{{val.title}}</h5>
-                    <small class="text-muted">{{val.date}}</small>
-                </div>
-                <div class="mb-1 preformance_description text-muted">{{val.description}}</div>
+    <div class="list-group">
+        <section @click="transition(val.id)" v-for="(val, keys) in Preformance.content" :key="keys" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{{val.title}}</h5>
+                <small class="text-muted">{{val.date}}</small>
             </div>
-            <div id="preformancebtnWrap" class="px-2 pt-3 pb-2">
-                <button class="btn btn-primary text-center shadow-sm  border rounded-pill px-2">もっとみる</button>
-            </div>
+            <div class="mb-1 preformance_description text-muted">{{val.description}}</div>
+        </section>
+        <div id="preformancebtnWrap" class="px-2 pt-3 pb-2">
+            <button class="btn btn-primary text-center shadow-sm  border rounded-pill px-2">もっとみる</button>
         </div>
     </div>
 </div>
@@ -32,13 +27,23 @@
 import preformances from "@/data/preformance/PreformanceData.json";
 export default {
     props: {
-        SiteData: {
+        SiteDatas: {
             type: Object
         }
     },
-    data(){
-        return{
-            Preformance:preformances
+    data() {
+        return {
+            Preformance: preformances
+        }
+    },
+    methods: {
+        transition(id) {
+            this.$router.push({
+                path: this.SiteDatas.profile,
+                query: id != null ? {
+                    Id: id
+                } : null
+            });
         }
     }
 }
@@ -73,10 +78,11 @@ export default {
     font-size: 13px;
 }
 
-#preformancebtnWrap{
+#preformancebtnWrap {
     text-align: center;
 }
-#preformancebtnWrap button{
-    font-size:16px;
+
+#preformancebtnWrap button {
+    font-size: 16px;
 }
 </style>

@@ -14,13 +14,15 @@
     </div>
     <TopNews :SiteDatas="this.SiteData" />
     <OverView :SiteDatas="this.SiteData"  :OverViewData="PageData.OverView[0]" />
-    <Preformance />
+    <Preformance  :SiteDatas="this.SiteData" />
+    <Introduction  :SiteDatas="this.SiteData" />
 </div> 
 </template>
 <script>
 import TopNews from "@/components/TopNews.vue"; 
 import OverView from "@/components/OverView.vue"; 
 import Preformance from "@/components/Performance.vue"; 
+import Introduction from "@/components/Introduction.vue"; 
 
 export default {
     props: {
@@ -38,7 +40,8 @@ export default {
     components:{
         TopNews,
         OverView,
-        Preformance
+        Preformance,
+        Introduction
     },
     mounted: function () {
         
