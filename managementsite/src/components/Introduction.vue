@@ -1,7 +1,7 @@
 <template>
     <div>
-        <section>
-            {{Introduction.title}}
+        <section id="introduction" class="pt-3">
+            <p class="text-center">{{Introduction.title}}</p>
         </section>
     </div>
 </template>
@@ -21,5 +21,10 @@ export default {
 }
 </script>
 <style scoped>
+#introduction{
 
+}
+#introduction p {
+    font-size:20px;
+}
 </style>
