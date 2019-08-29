@@ -6,9 +6,15 @@
     [
         {
           "id":0,
-          "title":"Fresh activity",
-          "date":"2019-8-25",
-          "description":"個人で活躍できるエンジニアを目指し、その第一歩として個人から気軽に依頼を引き受けられるように作成した業務依頼・相談用ホームページ"
+          "title":"GitHub",
+          "url":"",
+          "fontawesome":"fa-github"
+        },
+        {
+          "id":1,
+          "title":"Twitter",
+          "url":"",
+          "fontawesome":"fa-twitter"
         }
     ] 
 }
