@@ -1,17 +1,20 @@
 <template>
 <div>
-    <div class="card mt-2 mx-3" v-for="(val,index) in displayNewsFnc(News.Contents,nowpage,displaynews)" :key="index">
+    <div :id="'Id_' + val.Id" class="card mt-3 mx-3 shadow" v-for="(val,index) in displayNewsFnc(News.Contents,nowpage,displaynews)" :key="index">
         <div class="card-header row notMargin">
             <span class="col-8 px-0">{{val.Title}}</span>
             <span class="text-right col-4 news_date px-0">{{dataFormater(val.Date)}}</span>
         </div>
-        <div class="card-body">
+        <div class="card-body news_content">
             {{val.Content}}
         </div>
     </div>
     <div class="choreography mt-3">
         <div class="d-inline-block border shadow-sm mx-1" v-for="n in howmanyPages(News.Contents,displaynews)">
-            <button class="btn btn-light" @click="nowpage = n">{{n}}</button>
+                <button class="btn btn-light" @click="nowpage = n">
+                    {{n}}
+                </button>
+            </div>
         </div>
     </div>
 </div>
@@ -30,8 +33,15 @@ export default {
         return {
             News: news,
             nowpage: 1,
-            displaynews: 3
+            displaynews: 3,
+            page_dot:3
         }
+    },
+    mounted:function(){
+       if(this.$route.query.Id){
+          var thisPath = this.$route.path;
+          this.$router.push({path:thisPath + "#Id_"+Number(this.$route.query.Id)})
+       }
     },
     methods: {
         dataFormater(date) {
@@ -54,5 +64,9 @@ export default {
 
 .choreography {
     text-align: center;
+}
+
+.news_content {
+    font-size: 15px;
 }
 </style>

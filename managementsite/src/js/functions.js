@@ -41,3 +41,4 @@ export function NowPage(obj,display){
     }
     return page;
 }
+
