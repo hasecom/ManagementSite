@@ -3,7 +3,7 @@
       <Header :Basic="basic" :PageData="this.select['head'][0]" ref="header" />
         <div id="body">
             <router-view :PageData="this.select[this.display][0]" :SiteData="this.site"></router-view>
-            <PageFooter :PagesFooterData="this.pagesFooter" />
+            <PageFooter :PagesFooterData="this.pagesFooter[0]" />
         </div>
     <Footer :Basic="basic" />
 </div>

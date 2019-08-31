@@ -56,7 +56,19 @@ export const PagesFooter = [
     {
         Param:"ページフッター",
         Sites:Site[0],
-        MenuName:Basic[0].FooterMenu[0]
+        MenuName:Basic[0].FooterMenu,
+        MenuSub:[
+            {
+                "title":"料金",
+                "fontawesome":"fa-chevron-right",
+                "path":"/activity"
+            },
+            {
+                "title":"お問い合わせ",
+                "fontawesome":"fa-chevron-right",
+                "path":"/profile"
+            }
+        ]
     }
 ]
 
