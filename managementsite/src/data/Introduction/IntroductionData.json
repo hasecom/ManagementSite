@@ -2,6 +2,9 @@
     "image":"",
     "title":"個人紹介",
     "childtitle":"個人開発",
+    "portrait":"assets/intro.jpg",
+    "name":"長谷川",
+    "message":"IT系専門卒。上場企業のWebエンジニアとして2019年春入社。CtoCのサービス開発を行う。個人でも活動をしており、ブログやサービスを展開している。",
     "content":
     [
         {

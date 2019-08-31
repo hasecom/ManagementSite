@@ -3,8 +3,8 @@
       <Header :Basic="basic" :PageData="this.select['head'][0]" ref="header" />
         <div id="body">
             <router-view :PageData="this.select[this.display][0]" :SiteData="this.site"></router-view>
+            <PageFooter :PagesFooterData="this.pagesFooter" />
         </div>
-        <div class="padding" style="height:300px;"></div>
     <Footer :Basic="basic" />
 </div>
 </template>
@@ -12,6 +12,7 @@
 <script>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import PageFooter from '@/components/PageFooter.vue'
 import {
     Head,
     Basic,
@@ -19,7 +20,8 @@ import {
     News,
     Activity,
     Profile,
-    Site
+    Site,
+    PagesFooter
 } from './js/data'
 
 export default {
@@ -36,12 +38,14 @@ export default {
               "profile":Profile
               },
             TopPadding:0,
-            site:Site[0]
+            site:Site[0],
+            pagesFooter:PagesFooter,
         }
     },
     components: {
         Header,
-        Footer
+        Footer,
+        PageFooter
     },
     watch:{
       '$route'(){

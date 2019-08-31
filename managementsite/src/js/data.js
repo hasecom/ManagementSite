@@ -49,6 +49,16 @@ export const Head = [
         }
     }
 ]
+///<summary>
+///ページフッター 
+///</summary>
+export const PagesFooter = [
+    {
+        Param:"ページフッター",
+        Sites:Site[0],
+        MenuName:Basic[0].FooterMenu[0]
+    }
+]
 
 ///<summary>
 ///ホーム

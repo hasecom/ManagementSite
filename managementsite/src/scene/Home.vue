@@ -16,6 +16,7 @@
     <OverView :SiteDatas="this.SiteData"  :OverViewData="PageData.OverView[0]" />
     <Preformance  :SiteDatas="this.SiteData" />
     <Introduction  :SiteDatas="this.SiteData" />
+    <TwitterTimeLine />
 </div> 
 </template>
 <script>
@@ -23,6 +24,7 @@ import TopNews from "@/components/TopNews.vue";
 import OverView from "@/components/OverView.vue"; 
 import Preformance from "@/components/Performance.vue"; 
 import Introduction from "@/components/Introduction.vue"; 
+import TwitterTimeLine from '@/components/TwitterTimeLine.vue'
 
 export default {
     props: {
@@ -41,7 +43,8 @@ export default {
         TopNews,
         OverView,
         Preformance,
-        Introduction
+        Introduction,
+        TwitterTimeLine
     },
     mounted: function () {
         
