@@ -10,7 +10,7 @@
         </div>
     </div>
     <div class="choreography mt-3">
-        <div class="d-inline-block border shadow-sm mx-1" v-for="n in howmanyPages(News.Contents,displaynews)">
+        <div class="d-inline-block border shadow-sm mx-1" v-for="n in howmanyPages(News.Contents,displaynews)" :key="n">
                 <button class="btn btn-light" @click="nowpage = n">
                     {{n}}
                 </button>
@@ -33,14 +33,13 @@ export default {
         return {
             News: news,
             nowpage: 1,
-            displaynews: 3,
-            page_dot:3
+            displaynews: 5,
         }
     },
     mounted:function(){
+        scrollTo(0, 0);
        if(this.$route.query.Id){
-          var thisPath = this.$route.path;
-          this.$router.push({path:thisPath + "#Id_"+Number(this.$route.query.Id)})
+          this.$scrollTo("#Id_"+Number(this.$route.query.Id));  
        }
     },
     methods: {
