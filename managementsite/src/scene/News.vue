@@ -11,10 +11,9 @@
     </div>
     <div class="choreography mt-3">
         <div class="d-inline-block border shadow-sm mx-1" v-for="n in howmanyPages(News.Contents,displaynews)" :key="n">
-                <button class="btn btn-light" @click="nowpage = n">
-                    {{n}}
-                </button>
-            </div>
+            <button class="btn btn-light" @click="nowpage = n">
+                {{n}}
+            </button>
         </div>
     </div>
 </div>
@@ -36,11 +35,11 @@ export default {
             displaynews: 5,
         }
     },
-    mounted:function(){
+    mounted: function () {
         scrollTo(0, 0);
-       if(this.$route.query.Id){
-          this.$scrollTo("#Id_"+Number(this.$route.query.Id));  
-       }
+        if (this.$route.query.Id) {
+            this.$scrollTo("#Id_" + Number(this.$route.query.Id));
+        }
     },
     methods: {
         dataFormater(date) {

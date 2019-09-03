@@ -1,5 +1,5 @@
 <template>
-<div class="intro mt-3 border shadow-sm">
+<div class="intro mt-5 border shadow-sm">
     <section id="introduction" class="pt-3">
         <p class="text-center intro_title">{{Introduction.title}}</p>
         <div class="wrap_my_intro mb-3">

@@ -6,7 +6,7 @@
                 <span class="topnews_title col-6 text-left">{{val.Title}}</span>
         </section>
         <div id="topnewsbtnWrap" class="px-2">
-        <button class="btn btn-primary text-center shadow-sm  border rounded-pill px-2">もっとみる</button>
+        <button class="btn btn-primary text-center shadow-sm  border rounded-pill px-2" @click="transition()">もっとみる</button>
         </div>
     </div>
 </template>
