@@ -4,8 +4,8 @@
         <img class="card-img activity_img" :src="require('../'+ val.Image)" :alt="val.Title">
         <div class="card-img-overlay activity_bck">
             <h5 class="card-title row">
-                <span class="d-block col-8">{{val.Title}}</span>
-                <span class="d-block col-4 text-right"><i class="fas fa-chevron-right"></i></span>
+                <span class="d-block col-10">{{val.Title}}</span>
+                <span class="d-block col-2 text-right"><i class="fas fa-chevron-right"></i></span>
             </h5>
             <p class="card-text text-right pr-4">{{val.Price}}</p>
         </div>
@@ -45,6 +45,6 @@ export default {
 }
 
 .activity_bck .card-title {
-    font-size: 34px;
+    font-size: 24px;
 }
 </style>
