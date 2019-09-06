@@ -1,8 +1,9 @@
 <template>
 <div>
     <div class="row notMargin" ref="activity_card">
-        <div v-for="(val,keys) in DisplayContent" :key="keys" class="col-6 activity_card mb-1" data-toggle="modal" data-target="#ActivityModal">
-            <div class="card"><modal :modalData="val"/>
+        <modal :modalData="modalContent"/>
+        <div v-for="(val,keys) in DisplayContent" :key="keys" @click="cardClick(val)" class="col-6 activity_card mb-1">
+            <div class="card">
                 <img class="activity_img" :src="require('../'+val.Image)" :style="img_height" alt="">
                 <div class="main_card">
                     <div class="activity_title text-left px-1">{{val.Title}}</div>
@@ -30,12 +31,19 @@ export default {
         return {
             Activity: activity,
             DisplayContent: activity.Contents,
-            ImgHeight: 0
+            ImgHeight: 0,
+            modalContent:activity
         }
     },
     mounted: function () {
         this.ImgHeight = this.$refs.activity_card.clientWidth / 2;
 
+    },
+    methods:{
+        cardClick(val){
+            this.modalContent = val;
+            $("#ActivityModal").modal();
+        }
     },
     computed: {
         img_height() {
