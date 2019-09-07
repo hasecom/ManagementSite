@@ -1,7 +1,7 @@
 <template>
-<div>
+<div class="mt-1">
     <div class="row notMargin" ref="activity_card">
-        <modal :modalData="modalContent"/>
+        <modal :modalData="modalContent" ref="ActivityModal" />
         <div v-for="(val,keys) in DisplayContent" :key="keys" @click="cardClick(val)" class="col-6 activity_card mb-1">
             <div class="card">
                 <img class="activity_img" :src="require('../'+val.Image)" :style="img_height" alt="">
@@ -11,6 +11,7 @@
                 </div>
             </div>
         </div>
+        <div id="modal_backdrop" class="d-none" @click="callCloseModal()"    @touchmove="modalScroll" ></div>
     </div>
 </div>
 </template>
@@ -32,17 +33,26 @@ export default {
             Activity: activity,
             DisplayContent: activity.Contents,
             ImgHeight: 0,
-            modalContent:activity
+            modalContent: activity
         }
     },
     mounted: function () {
         this.ImgHeight = this.$refs.activity_card.clientWidth / 2;
 
     },
-    methods:{
-        cardClick(val){
+    methods: {
+        //活動 モーダルオープン
+        cardClick(val) {
             this.modalContent = val;
             $("#ActivityModal").modal();
+            $("#modal_backdrop").removeClass("d-none");
+        },
+        //活動　モーダルクローズ(モーダルコンポーネントへ呼び出し)
+        callCloseModal() {
+            this.$refs['ActivityModal'].closeModal();
+        },
+        modalScroll(e){
+            this.$refs.ActivityModal.TouchActivityModal(e)
         }
     },
     computed: {
@@ -71,7 +81,6 @@ export default {
 .activity_title {
     font-size: 15px;
     height: 30px;
-
 }
 
 .activity_bck {
@@ -84,5 +93,16 @@ export default {
 
 .activity_bck .card-title {
     font-size: 24px;
+}
+
+#modal_backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: none;
+    z-index: 1045 !important;
 }
 </style>

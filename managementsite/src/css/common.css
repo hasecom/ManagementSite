@@ -2,6 +2,9 @@
     --main-bg-color: #f5f6fa;
     --main-component-color:rgba(52, 152, 219,1);
   }
+html {
+    -webkit-overflow-scrolling: touch;
+}
 body{
     background:var(--main-bg-color);
 }

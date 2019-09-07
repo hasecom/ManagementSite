@@ -4,9 +4,15 @@
         {
             "Title":"WordPressインストール",
             "Price":"4,000円〜",
-            "Description":"kkk",
+            "Period":"2週間〜",
+            "Description":"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
             "Image":"assets/intro.jpg",
             "Details":[
+                {
+                    "Title":"aa",
+                    "Description":"bb",
+                    "Price":"cc"
+                },
                 {
                     "Title":"aa",
                     "Description":"bb",
