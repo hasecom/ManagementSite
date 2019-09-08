@@ -25,8 +25,6 @@ export default {
             isMounted:false
         }
     },
-    watch:{
-    },
     mounted:function(){
         this.isMounted = true;
     },
